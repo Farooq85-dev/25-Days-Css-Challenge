@@ -1,0 +1,75 @@
+/* Pseudo Classes */
+
+/*  Pseudo-classes are keywords which allow selection based on information that lies outside of the document tree or */
+
+/* Syntax */
+selector:pseudo-class {
+  property: VALUE;
+}
+
+.activeElement:active {
+  color: red;
+  cursor: pointer;
+}
+
+#news:target {
+  background-color: red;
+}
+
+input:checked {
+  height: 20px;
+  width: 20px;
+}
+
+.disabled-btn:disabled {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+}
+
+.emptyDiv:empty {
+  width: 20px;
+  border-radius: 2px;
+  height: 20px;
+  background: #000;
+}
+
+input:enabled {
+  background: #ffff00;
+}
+
+.parent p:first-child {
+  color: aqua;
+}
+
+.parent p:nth-child(3) {
+  color: greenyellow;
+}
+
+.parent:last-child {
+  color: royalblue;
+}
+
+p:first-of-type {
+  background-color: red;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+input:optional {
+  border: 10px solid forestgreen;
+}
+
+input:placeholder-shown {
+  color: greenyellow;
+  border: 2px solid #ffff00;
+}
+
+input[type="range"] {
+}
+
+/* Class Name Selectors */
+/* ID Name Selectors */

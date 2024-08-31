@@ -5,3 +5,5 @@
 ## Day-1:- Getting started with CSS
 
 ## Day-2:- Structure and Formatting of a CSS Rule
+
+## Day-3:- PSEUDO CLASSES
