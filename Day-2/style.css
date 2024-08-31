@@ -1,0 +1,91 @@
+/*  Property Lists */
+
+/*  Some properties can take multiple values, collectively known as a property list. */
+
+span {
+  text-shadow: yellow 0 0 3px, green 4px 4px 10px;
+}
+
+/* Multiple Selectors */
+
+/* When you group CSS selectors, you apply the same styles to several different elements without repeating the styles
+ in your style sheet. Use a comma to separate multiple grouped selectors. */
+
+div,
+p {
+  color: blue;
+}
+
+/* Rules, Selectors, and Declaration Blocks */
+
+/* A CSS rule consists of a selector (e.g. 
+h1) and declaration block ( */
+h1 {
+  /* Declaration Block.... */
+  color: red;
+}
+
+/* Comments */
+
+/* Single Line */
+
+/* Hello! World */
+
+/* Multiple Line */
+/*
+sdsd
+sd
+s
+dsd*/
+
+/* Advanced Selectors */
+
+/* Selects elements with the given attribute */
+
+div[placeholder] {
+  color: red;
+}
+
+/* Selects elements with the given attribute and value. */
+
+div[placeholder="Please Enter Name."] {
+  color: green;
+}
+
+/*  Selects elements with the given attribute and value where the given attribute contains the given value anywhere (as
+ a substring). */
+
+[class*="foo"] {
+  color: red;
+}
+
+div [btn~="btn"] {
+  border-width: 10px;
+}
+
+/*  Selects elements with the given attribute and value where the given attribute begins with the value. */
+
+[class^="foo-"] {
+  color: red;
+}
+
+/* Combinators */
+
+/*
+ div span Descendant selector (all 
+div >
+ span Child selector (all 
+<span>s that are descendants of a 
+<span>s that are a direct child of a 
+a ~ span General Sibling selector (all 
+a +
+ span
+ <span>s that are siblings after an 
+Adjacent Sibling selector (all 
+#my-ID but with lower
+ <div>)
+ <div>)
+ <a>)
+ <span>s that are immediately after an 
+<a>
+*/
