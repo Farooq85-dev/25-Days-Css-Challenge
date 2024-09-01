@@ -1,0 +1,90 @@
+/* Background Color */
+
+/*  transparent:- specifies that the background color should be transparent. This is default.
+ */
+
+/*  inherit:- inherits this property from its parent element. */
+
+/*  initial:- sets this property to its default value. */
+
+/*  Hex color codes */
+
+/*  Hex code is used to denote RGB components of a color in base-16 hexadecimal notation. #ff0000, for example, is
+ bright red, where the red component of the color is 256 bits (ff) and the corresponding green and blue portions of
+ the color is 0 (00).
+ If both values in each of the three RGB pairings (R, G, and B) are the same, then the color code can be shortened
+ into three characters (the first digit of each pairing). 
+#ff0000 can be shortened to 
+shortened to 
+#fff */
+
+/*  RGB / RGBa */
+
+/*
+RGB stands for Red, Green and Blue, and requires of three separate values between 0 and 255, put between
+brackets, that correspond with the decimal color values for respectively red, green and blue.
+RGBa allows you to add an additional alpha parameter between 0.0 and 1.0 to define opacity.*/
+
+header {
+  background-color: rgb(0, 0, 0); /* black */
+}
+footer {
+  background-color: rgba(0, 0, 0, 0.5); /* black with 50% opacity */
+}
+
+/*  HSL / HSLa */
+
+/*
+Another way to declare a color is to use HSL or HSLa and is similar to RGB and RGBa.
+HSL stands for hue, saturation, and lightness, and is also often called HLS:
+Hue is a degree on the color wheel (from 0 to 360).
+Saturation is a percentage between 0% and 100%.
+Lightness is also a percentage between 0% and 100%.
+HSLa allows you to add an additional alpha parameter between 0.0 and 1.0 to define opacity.
+*/
+
+li a {
+  background-color: hsl(120, 100%, 50%); /* green */
+}
+#p1 {
+  background-color: hsla(120, 100%, 50%, 0.8); /* green with 30% opacity */
+}
+
+/* Background Gradients */
+
+/* Gradients are new image types, added in CSS3. */
+
+div {
+  background: linear-gradient(
+    to left,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo
+  );
+}
+
+/* Background Image */
+
+/*
+The background-image property is used to specify a background image to be applied to all matched elements. By
+ default, this image is tiled to cover the entire element, excluding margin.*/
+
+div {
+  width: 200px;
+  height: 200px;
+  background-image: url("https://images.unsplash.com/photo-1638129640863-d1f283b8ffdb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWluaW1pbHN0aWMlMjBiYWNrZ3JvdW5kc3xlbnwwfHwwfHx8MA%3D%3D"),
+    url("https://images.unsplash.com/file-1715714098234-25b8b4e9d8faimage?w=416&dpr=2&auto=format&fit=crop&q=60");
+}
+
+/*  More CSS for Background Image */
+
+/*
+ background-size:     xpx ypx | x% y%;
+ background-repeat:   no-repeat | repeat | repeat-x | repeat-y;
+ background-position: left offset (px/%) right offset (px/%) | center center | left top | right
+ bottom
+*/
+
