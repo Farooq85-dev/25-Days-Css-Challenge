@@ -1,0 +1,92 @@
+/* Background Size */
+
+div {
+  text-align: center;
+  background-image: url("");
+  /* background-size: 100% 30%; */
+}
+
+/*  Background Attachment */
+
+/* The background-attachment property sets whether a background image is fixed or scrolls with the rest of the page. */
+
+/* scroll The background scrolls along with the element. This is default.
+ */
+
+/* fixed The background is fixed with regard to the viewport.fixed The background is fixed with regard to the viewport.
+ */
+
+/* background-blend-mode Property */
+
+.my-div {
+  width: 200px;
+  height: 200px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(to right, black 0%, white 100%),
+    url("https://static.pexels.com/photos/54624/strawberry-fruit-red-sweet-54624-medium.jpeg");
+  background-blend-mode: overlay;
+}
+
+/* Using Flexbox */
+
+.container {
+  height: 100vh;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Using CSS transform */
+
+.container {
+  position: relative;
+}
+
+.element {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Using margin */
+
+.containerDiv {
+  width: 100%;
+  height: 100px;
+  padding-bottom: 40px;
+}
+#centeredDiv {
+  margin: 0px auto;
+  width: 200px;
+  height: 100px;
+  border: 1px solid #000;
+}
+
+/* Using text-align */
+
+p {
+  text-align: center;
+}
+
+/* Using position */
+
+.parent {
+  position: relative;
+  height: 500px;
+}
+.center {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+
+/* Using calc() */

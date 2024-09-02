@@ -9,3 +9,5 @@
 ## Day-3:- PSEUDO CLASSES
 
 ## Day-4:- Backgrounds
+
+## Day-5:- MORE ON BACKGRUNDS & CENTERING
