@@ -1,0 +1,59 @@
+/* What is the Box Model? */
+
+/*
+The browser creates a rectangle for each element in the HTML document. The Box Model describes how the
+padding, border, and margin are added to the content to create this rectangle.*/
+
+/* box-sizing */
+
+/* By default Content-Box is applied on all HTML elemet box */
+
+/* Content-Box---> Content */
+/* Padding-Box---> Content + Padding */
+/* Border-Box---> Content + Padding + border */
+
+/* Margins */
+
+/* Margin Collapsing */
+/* When two margins are touching each other vertically, they are collapsed. When two margins touch horizontally,
+they do not collapse. */
+
+/* Apply Margin on a Given Side */
+
+/*  margin-left */
+/* margin-right */
+/* margin-top */
+/*  margin-bottom */
+
+/*  Margin property simplification */
+
+p {
+  margin: 10px 15px; /* 10px margin-top & bottom And 15px margin-right & left*/
+
+  /*equals to:*/
+
+  margin: 10px 15px 10px 15px;
+
+  /*equals to:*/
+
+  margin: 10px 15px 10px;
+  /* margin left will be calculated from the margin right value (=15px) */
+}
+
+/* Negative margins */
+
+div {
+  margin-right: -200px;
+}
+
+/* Padding */
+
+/*  The padding property sets the padding space on all sides of an element. The padding area is the space between the
+ content of the element and its border. Negative values are not allowed. */
+
+/* Padding on a given side */
+
+/*  padding-top
+ padding-right
+ padding-bottom
+ padding-left */
