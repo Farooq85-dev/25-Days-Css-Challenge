@@ -1,0 +1,132 @@
+/* Border */
+
+/* Section 10.1: border-radius */
+
+/*
+The border-radius property allows you to change the shape of the basic box model.
+Every corner of an element can have up to two values, for the vertical and horizontal radius of that corner (for a
+maximum of 8 values).The border-radius property allows you to change the shape of the basic box model.
+Every corner of an element can have up to two values, for the vertical and horizontal radius of that corner (for a
+maximum of 8 values). */
+
+.border-radius {
+  border: 2px solid #212121;
+  width: 300px;
+  height: 300px;
+
+  border-radius: 10px;
+}
+
+.circle {
+  border: 2px solid #212121;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+}
+
+/*  Section 10.2: border-style */
+
+/* The border-style property sets the style of an element's border. This property can have from one to four values
+ (for every side of the element one value.) */
+
+.border-style {
+  border-style: solid dotted dashed double ridge groove inset outset;
+}
+
+/*  border-style can also have the values none and hidden. */
+
+/*  Section 10.3: Multiple Borders */
+
+/* Using Outline */
+.div1 {
+  border: 3px solid black;
+  outline: 6px solid blue;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+
+/* Using box-shadow */
+
+.div2 {
+  border: 5px solid green;
+  box-shadow: 0px 0px 0px 4px #000;
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}
+
+/*  Section 10.4: border (shorthands) */
+
+/*  In most cases you want to define several border properties (
+border-width, sides of an element */
+
+/* Instead of writing:
+
+ border-width: 1px;
+ border-style: solid;
+ border-color: #000
+*/
+
+/* 
+You can simply write:
+
+border: 1px solid #000; 
+*/
+
+/*  These shorthands are also available for every side of an element: 
+border-bottom. So you can do */
+
+/*  border-top: 2px double #aaaaaa; */
+
+/*  Section 10.5: border-collapse */
+
+table {
+  border-collapse: separate;
+  /* Spacing will be created during Border */
+  border-spacing: 10px;
+}
+
+/* Section 10.6: border-image */
+
+/*
+With the border-image property you have the possibility to set an image to be used instead of normal border styles.
+*/
+
+/*  A 
+border-image essentially consist of a
+
+border-image-source:
+border-image-slice:
+border-image-repeat:
+*/
+
+.border-image {
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+  background: transparent;
+  border: 10px solid transparent;
+  border-image: url("https://i.ytimg.com/vi/ekgUjyWe1Yc/maxresdefault.jpg") 20
+    stretch;
+}
+
+/*  Section 10.7: Creating a multi-colored border using border image */
+
+.multi-border {
+  border-image: linear-gradient(
+    to right,
+    red 20%,
+    green 20%,
+    green 40%,
+    blue 40%,
+    blue 60%,
+    maroon 60%,
+    maroon 80%,
+    chocolate 80%
+  ); /* gradient with required colors */
+  border-image-slice: 1;
+  border: 2px;
+  width: 100px;
+  height: 100px;
+}
