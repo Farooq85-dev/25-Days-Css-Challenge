@@ -1,0 +1,60 @@
+/* Chapter 11: Outlines */
+
+/* All Details in HTML Table  */
+
+/*  Section 11.1: Overview */
+
+/*
+ Outline is a line that goes around the element, outside of the border. In contrast to 
+ border, outlines do not take any space in the box model. So adding an outline to an element does not affect the position of the element or other elements. */
+
+/* The essential parts of 
+outline are 
+outline-color, 
+outline-style and 
+outline-width. */
+
+/*  outline: 1px solid black; */
+
+.outline {
+  border: 2px solid red;
+  outline: 2px solid green;
+  padding: 10px;
+}
+
+/*  Section 11.2: outline-style */
+
+/* The outline-style property is used to set the style of the outline of an element. */
+
+/* dotted */
+/* dashed */
+/* solid */
+/* double */
+/* groove */
+/* inset */
+/* outset */
+
+/*  Chapter 12: Overflow */
+
+/* visible:- Shows all overflowing content outside the element */
+/* scroll:- Hides the overflowing content and adds a scroll bar */
+/* hidden:- Hides the overflowing content, both scroll bars disappear and the page becomes fixed */
+/* hidden:- Hides the overflowing content, both scroll bars disappear and the page becomes fixed */
+/* auto:- Same as scroll if content overflows, but doesn't add scroll bar if content fits */
+/* inherit Inherit's the parent element's value for this property */
+
+/*  Section 12.1: overflow-wrap */
+
+/*  overflow-wrap tells a browser that it can break a line of text inside a targeted element onto multiple lines in an otherwise unbreakable place. Helpful in preventing an long string of text causing layout problems due to overflowing it's container. */
+
+/* normal:- Lets a word overflow if it is longer than the line
+break-word:- Will split a word into multiple lines, if necessary
+inherit:- Inherits the parent element's value for this property */
+
+
+/*  Section 12.2: overflow-x and overflow-y */
+
+/* These two properties work in a similar fashion as the 
+overflow property and accept the same values. The
+ overflow-x parameter works only on the x or left-to-right axis. The 
+axis */
