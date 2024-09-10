@@ -1,0 +1,99 @@
+/* Chapter 13: Media Queries */
+
+/* Section 13.1: Terminology and Structure */
+
+/* Media queries allow one to apply CSS rules based on the type of device / media (e.g. screen, print or handheld)
+called media type, additional aspects of the device are described with media features such as the availability of
+color or viewport dimensions. */
+
+/* General Structure of a Media Query */
+
+/*
+@media  [....]{}
+*/
+
+/* A Media Query containing a Media Type */
+
+@media screen {
+}
+
+/* A Media Query containing a Media Type and Fetaure */
+@media screen and (max-width: 992px) {
+}
+
+/* A Media Query containing a Media Feature (and an implicit Media Type of "all")    */
+@media (orientation: portrait) {
+  /* One or more CSS rules to apply when the query is satisfied */
+}
+
+/* Section 13.2: Basic Example */
+
+@media screen and (min-width: 720px) {
+  body {
+    background-color: skyblue;
+  }
+}
+
+/* Section 13.3: mediatype */
+
+/* Media queries have an optional mediatype parameter. This parameter is placed directly after the @media
+declaration (@media mediatype), for example:- */
+
+@media print {
+  html {
+    background-color: white;
+  }
+}
+
+/* The mediatype parameter has an optional not or only prefix that will apply the styles to everything except the
+specified mediatype or only the specified media type, respectively. For example, the following code example will
+apply the style to every media type except print. */
+
+@media not print {
+  html {
+    background-color: green;
+  }
+}
+
+@media only screen {
+  .fadeInEffects {
+    display: block;
+  }
+}
+
+/* Section 13.5: Width vs Viewport */
+
+/* When we are using "width" with media queries it is important to set the meta tag correctly. Basic meta tag looks like
+this and it needs to be put inside the <head> tag. */
+
+/* View-port is the width of the device itself. If your screen resolution says the resolution is 1280 x 720, your view-port
+width is "1280px". */
+
+/* Section 13.6: Using Media Queries to Target Dierent ScreenSizes */
+
+@media only screen and (min-width: 300px) and (max-width: 767px) {
+  .site-title {
+    font-size: 80%;
+  }
+  /* Styles in this block are only applied if the screen size is atleast 300px wide, but no more
+than 767px */
+}
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .site-title {
+    font-size: 90%;
+  }
+  /* Styles in this block are only applied if the screen size is atleast 768px wide, but no more
+than 1023px */
+}
+@media only screen and (min-width: 1024px) {
+  .site-title {
+    font-size: 120%;
+  }
+  /* Styles in this block are only applied if the screen size is over 1024px wide. */
+}
+
+/* Section 13.7: Use on link tag */
+
+/* <link rel="stylesheet" media="min-width: 600px" href="example.css" /> */
+
+/* This stylesheet is still downloaded but is applied only on devices with screen width larger than 600px. */
