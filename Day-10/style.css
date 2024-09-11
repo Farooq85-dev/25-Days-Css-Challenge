@@ -1,0 +1,76 @@
+/* Floats */
+
+/* The most basic use of a float is having text wrap around an image. The below code will produce two paragraphs
+and an image, with the second paragraph flowing around the image */
+
+img {
+  float: left;
+  margin-right: 10px;
+}
+
+/* Section 14.2: clear property */
+
+/* The clear property is directly related to floats. Property Values:
+none - Default. Allows floating elements on both sides
+left - No floating elements allowed on the left side
+right - No floating elements allowed on the right side
+both - No floating elements allowed on either the left or the right side
+initial - Sets this property to its default value. Read about initial
+inherit - Inherits this property from its parent element. Read about inherit. */
+
+img {
+  clear: both !important;
+}
+
+/* Section 14.4: In-line DIV using float */
+
+.inner-div1 {
+  width: 50%;
+  margin-right: 0px;
+  float: left;
+  background: #337ab7;
+  padding: 50px 0px;
+}
+
+.inner-div2 {
+  width: 50%;
+  margin-right: 0px;
+  float: left;
+  background: #dd2c00;
+  padding: 50px 0px;
+}
+
+p {
+  text-align: center;
+}
+
+/* Section 14.5: Use of overflow property to clear floats */
+
+/* Setting overflow value to hidden,auto or scroll to an element, will clear all the floats within that element.
+Note: using overflow:scroll will always show the scrollbox */
+
+/* Section 14.7: Simple Three Fixed-Width Column Layout */
+
+.wrapper {
+  width: 600px;
+  background-color: pink;
+  padding: 20px;
+  /* Floated elements don't use any height. Adding "overflow:hidden;" forces the
+       parent element to expand to contain its floated children. */
+  overflow: hidden;
+}
+.left-sidebar {
+  width: 150px;
+  background-color: blue;
+  float: left;
+}
+.content {
+  width: 300px;
+  background-color: yellow;
+  float: left;
+}
+.right-sidebar {
+  width: 150px;
+  background-color: green;
+  float: right;
+}
