@@ -29,3 +29,106 @@ p {
   font-size: 20px;
   font-family: Arial, sans-serif;
 }
+
+p {
+  font: bold 24px "Gill Sans", Gill Sans MT !important;
+}
+
+/* Initial value for each of the properties: */
+
+/* font-style: normal;
+font-variant: normal;
+font-weight: normal;
+font-stretch: normal;
+font-size: medium;
+line-height: normal;
+font-family – depends on user agent
+*/
+
+.quotes {
+  quotes: "|" "|" !important ;
+}
+
+/* Section 15.3: Font Size */
+
+#element-one {
+  font-size: 30px;
+}
+
+#element-two {
+  font-size: 10px;
+}
+
+/* Section 15.4: Text Direction */
+
+.direction-text {
+  width: 70vw;
+  writing-mode: vertical-rl !important;
+}
+
+/* Section 15.5: Font Stacks */
+
+/* font-family: Consolas, 'Courier New', monospace; */
+
+/* The browser will attempt to apply the font face "Consolas" to the characters within the elements targeted by the
+above property. If this font is not available, or the font does not contain a glyph for the required character, the
+browser will fall back to "Courier New," and, if necessary, any monospace font on the user's computer. */
+
+/* Section 15.6: Text Overflow */
+
+/* The text-overflow property deals with how overflowed content should be signaled to users. In this example, the ellipsis represents clipped text. */
+
+/* .text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+} */
+
+/* Section 15.7: Text Shadow */
+
+/* To add shadows to text, use the text-shadow property. The syntax is as follows: */
+
+/* text-shadow: horizontal-offset vertical-offset blur color; */
+
+.text {
+  text-shadow: 2px 2px 10px #212121 !important;
+}
+
+/* Section 15.8: Text Transform */
+
+/* The text-transform property allows you to change the capitalization of text. Valid values are: uppercase, capitalize, lowercase, initial, inherit, and none. */
+
+.text {
+  text-transform: none;
+}
+
+/* Section 15.9: Letter Spacing */
+
+.text {
+  letter-spacing: 10px;
+}
+
+/* Section 15.10: Text Indent */
+
+.text {
+  text-indent: 10px;
+}
+
+/* The text-indent property specifies how much horizontal space text should be moved before the beginning of the first line of the text content of an element. */
+
+/* Section 15.11: Text Decoration */
+
+.text {
+  text-decoration: dotted line-through red;
+}
+
+/* Section 15.12: Word Spacing */
+
+.text {
+  word-spacing: 10px;
+}
+
+/* Section 15.13: Font Variant */
+
+.text {
+  font-variant: small-caps !important;
+}
