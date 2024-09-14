@@ -1,0 +1,88 @@
+/* Chapter 16: Flexible Box Layout (Flexbox) */
+
+/* The Flexible Box module, or just 'flexbox' for short, is a box model designed for user interfaces, and it allows users
+to align and distribute space among items in a container such that elements behave predictably when the page
+layout must accommodate different, unknown screen sizes. A flex container expands items to fill available space
+and shrinks them to prevent overflow. */
+
+/* Section 16.1: Dynamic Vertical and Horizontal Centering (align-items, justify-content) */
+
+/* .aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aligner-item {
+  max-width: 100%;
+}
+
+.bx1,
+.bx2,
+.bx3 {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: beige;
+} */
+
+/* Boxes will be in Row direction */
+/* div#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} */
+
+/* Boxes will be in Column direction */
+/* div#container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} */
+
+/* Section 16.2: Sticky Variable-Height Footer */
+
+/* This code creates a sticky footer. When the content doesn't reach the end of the viewport, the footer sticks to the
+bottom of the viewport. When the content extends past the bottom of the viewport, the footer is also pushed out of
+the viewport. */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  flex: 1 0 auto;
+}
+.header,
+.footer {
+  background-color: grey;
+  color: white;
+  flex: none;
+}
+
+/* Section 16.3: Optimally fit elements to their container */
+
+.flex-container {
+  background-color: #000;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: stretch;
+}
+.flex-item {
+  background-color: #ccf;
+  margin: 0.1em;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 200px;
+}
+
+/* Section 16.4: Holy Grail Layout using Flexbox */
+
+/* Section 16.6: Same height on nested containers */
