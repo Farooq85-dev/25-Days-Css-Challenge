@@ -26,4 +26,6 @@
 
 ## Day-11:- TYPOGRAPHY
 
-## Day-11:- FLEX BOX
+## Day-12:- FLEX BOX
+
+## Day-13:- SPECIFICITY & COLOR
