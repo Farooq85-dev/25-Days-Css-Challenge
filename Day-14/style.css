@@ -1,0 +1,120 @@
+/* Chapter 20: Length Units */
+
+/* % Define sizes in terms of parent objects or current object dependent on property
+em Relative to the font-size of the element (2em means 2 times the size of the current font)
+rem Relative to font-size of the root element
+vw Relative to 1% of the width of the viewport*
+vh Relative to 1% of the height of the viewport*
+vmin Relative to 1% of viewport's* smaller dimension
+vmax Relative to 1% of viewport's* larger dimension
+cm centimeters
+mm millimeters
+in inches (1in = 96px = 2.54cm)
+px pixels (1px = 1/96th of 1in)
+pt points (1pt = 1/72 of 1in)
+pc picas (1pc = 12 pt)
+s seconds (used for animations and transitions)
+ms milliseconds (used for animations and transitions)
+ex Relative to the x-height of the current font
+ch Based on the width of the zero (0) character
+fr fractional unit (used for CSS Grid Layout)
+A CSS distance measurement is a number immediately followed by a length unit (px, em, pc, in, ...)
+CSS supports a number of length measurements units. They are absolute or relative. */
+
+/* Chapter 21: Pseudo-Elements */
+
+/* ::before */
+/* p::before {
+    content: "*";
+    color: red;
+    } */
+
+/* ::after */
+/* p::after {
+  content: "*";
+  color: yellowgreen;
+} */
+
+/* ::first-letter */
+/* p::first-letter {
+  color: red;
+  font-size: 30px;
+} */
+
+/* ::first-line */
+/* p::first-line {
+  color: green;
+  font-size: 30px;
+} */
+
+/* ::selection */
+/* p::selection {
+  color: white;
+  background-color: #222;
+} */
+
+/* ::placeholder */
+/* input::placeholder {
+  color: red;
+} */
+
+/* ::marker */
+/* ::marker {
+  color: red;
+} */
+
+/* Chapter 22: Positioning */
+
+/* static Default value. Elements render in order, as they appear in the document flow. The top, right, bottom,
+left and z-index properties do not apply.
+relative The element is positioned relative to its normal position, so left:20px adds 20 pixels to the element's
+LEFT position
+fixed The element is positioned relative to the browser window
+absolute The element is positioned relative to its first positioned (not static) ancestor element
+initial Sets this property to its default value.
+inherit Inherits this property from its parent element.
+sticky Experimental feature. It behaves like position: static within its parent until a given offset threshold
+is reached, then it acts as position: fixed.
+unset Combination of initial and inherit. More info here. */
+
+.parent {
+  position: relative;
+  border: 2px solid red;
+}
+
+.box1 {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  width: 600px;
+  height: 100px;
+  background-color: aquamarine;
+}
+
+.box2 {
+  width: 600px;
+  height: 100px;
+  background-color: purple;
+}
+
+.box3 {
+  width: 600px;
+  height: 100px;
+  background-color: green;
+}
+
+.navbar {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: rgb(26, 19, 12);
+}
+
+.hero {
+  height: 100vh;
+  width: 100%;
+  background-color: cadetblue;
+}
