@@ -1,0 +1,52 @@
+/* Chapter 24: Grid */
+
+/* Grid layout is a new and powerful CSS layout system that allows to divide a web page content into rows and
+columns in an easy way. */
+
+/* Section 24.1: Basic Example */
+
+.container {
+  border: 2px solid black;
+  display: grid;
+  grid-template-columns: 100px 50px;
+}
+
+.item {
+  border: 2px solid red;
+  width: 30px;
+  height: 30px;
+}
+
+/* Chapter 25: Tables */
+
+/* Section 25.1: table-layout */
+
+/* The table-layout property changes the algorithm that is used for the layout of a table */
+
+/* Section 25.3: border-collapse */
+
+/* The border-collapse property determines if a tables' borders should be separated or merged. */
+
+/* Section 25.4: border-spacing */
+
+/* The border-spacing property determines the spacing between cells. This has no effect unless border-collapse is
+set to separate. */
+
+/* Section 25.5: caption-side */
+
+/* The caption-side property determines the vertical positioning of the <caption> element within a table. This has no
+effect if such element does not exist. */
+
+/* top This is the default value. It places the caption above the table.
+bottom This value places the caption below the table. */
+
+/* Chapter 26: Transitions */
+div {
+  height: 100px;
+  width: 100px;
+  border: 1px solid;
+  transition-property: height, width;
+  transition-duration: 1s, 500ms;
+  transition-timing-function: linear;
+  transition-delay: 0s, 1s;
+}
