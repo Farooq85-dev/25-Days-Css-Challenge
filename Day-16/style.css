@@ -1,0 +1,107 @@
+/* Chapter 27: Animations */
+
+/* For multi-stage CSS animations, you can create CSS @keyframes. Keyframes allow you to define multiple animation
+points, called a keyframe, to define more complex animations. */
+
+.RainbowBackground {
+  width: 200px;
+  height: 200px;
+  animation: rainbow-background 0.5s infinite;
+}
+
+@keyframes rainbow-background {
+  0% {
+    background-color: #ff0000;
+  }
+  8.333% {
+    background-color: #ff8000;
+  }
+  16.667% {
+    background-color: #ffff00;
+  }
+  25.000% {
+    background-color: #80ff00;
+  }
+  33.333% {
+    background-color: #00ff00;
+  }
+  41.667% {
+    background-color: #00ff80;
+  }
+  50.000% {
+    background-color: #00ffff;
+  }
+  58.333% {
+    background-color: #0080ff;
+  }
+  66.667% {
+    background-color: #0000ff;
+  }
+  75.000% {
+    background-color: #8000ff;
+  }
+  83.333% {
+    background-color: #ff00ff;
+  }
+  91.667% {
+    background-color: #ff0080;
+  }
+  100.00% {
+    background-color: #ff0000;
+  }
+}
+
+/* There's a few different things to note here. First, the actual @keyframes syntax.
+@keyframes rainbow-background{
+This sets the name of the animation to rainbow-background.
+ */
+
+/* Chapter 28: 2D Transforms */
+
+/* Section 28.1: Rotate */
+
+.rotate {
+  margin-left: 100px;
+  width: 100px;
+  height: 100px;
+  background: teal;
+  border-radius: 10px;
+  transform: rotate(45deg);
+}
+
+/* Section 28.2: Scale */
+
+.scale {
+  margin-left: 100px;
+  width: 100px;
+  height: 100px;
+  background: teal;
+  transform: scale(0.5, 1.3);
+}
+
+/* Section 28.3: Skew */
+
+.skew {
+  width: 100px;
+  height: 100px;
+  background: teal;
+  transform: skew(20deg, -20deg);
+}
+
+/* Section 28.4: Multiple transforms */
+
+.transform {
+  width: 100px;
+  height: 190px;
+  background: teal;
+  transform: rotate(30deg) translateX(200px);
+}
+
+/* Section 28.5: Translate */
+
+.translate {
+  width: 100px;
+  height: 100px;
+  background: teal;
+  transform: translate(800px, 10vh);
+}
