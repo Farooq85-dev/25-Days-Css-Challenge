@@ -35,3 +35,5 @@
 ## Day-15:- TABLE, TRANSITION AND GRID
 
 ## Day-16:- ANIMATIONS & Transforms
+
+## Day-17:- FILTER & CURSOR STYLING

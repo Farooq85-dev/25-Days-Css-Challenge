@@ -1,0 +1,70 @@
+/* Chapter 30: Filter Property */
+
+/* blur(x) Blurs the image by x pixels.
+brightness(x) Brightens the image at any value above 1.0 or 100%. Below that, the image will be
+darkened.
+contrast(x) Provides more contrast to the image at any value above 1.0 or 100%. Below that, the
+image will get less saturated.
+drop-shadow(h, v, x, y, z) Gives the image a drop-shadow. h and v can have negative values. x, y, and z are optional.
+greyscale(x) Shows the image in greyscale, with a maximum value of 1.0 or 100%.
+hue-rotate(x) Applies a hue-rotation to the image.
+invert(x) Inverts the color of the image with a maximum value of 1.0 or 100%.
+opacity(x) Sets how opaque/transparent the image is with a maximum value of 1.0 or 100%.
+saturate(x) Saturates the image at any value above 1.0 or 100%. Below that, the image will start to
+de-saturate.
+sepia(x) Converts the image to sepia with a maximum value of 1.0 or 100%. */
+
+/* Section 30.1: Blur */
+
+img {
+  /* filter: blur(10px); */
+  /* filter: brightness(10%); */
+  /* filter: contrast(10%); */
+  /* filter: greyscale(50%); */
+}
+
+/* Section 30.3: Hue Rotate */
+
+img {
+  /* filter: hue-rotate(180deg); */
+}
+
+/* Section 30.5: Invert Color */
+
+img {
+  /* filter: invert(80%); */
+}
+
+/* sepia */
+
+img {
+  /* filter: sepia(50%); */
+}
+
+/* Opacity */
+
+img {
+  /* filter: opacity(50%); */
+}
+
+/* Chapter 31: Cursor Styling */
+
+/* Section 31.1: Changing cursor type */
+
+button {
+  /* cursor:wait; */
+}
+
+/* Section 31.2: pointer-events */
+/* 'none' prevents all click, state and cursor options on the specified HTML element [[1]] */
+
+button {
+  pointer-events: none;
+}
+
+/* Section 31.3: caret-color */
+
+textarea {
+  caret-color: red;
+  caret-shape:block !important;
+}
