@@ -1,0 +1,95 @@
+/* Chapter 32: box-shadow */
+
+/*
+inset by default, the shadow is treated as a drop shadow. the inset keyword draws the shadow inside the
+frame/border.
+offset-x the horizontal distance
+offset-y the vertical distance
+blur-radius 0 by default. value cannot be negative. the bigger the value, the bigger and lighter the shadow
+becomes.
+spread-radius 0 by default. positive values will cause the shadow to expand. negative values will cause the shadow
+to shrink.
+color can be of various notations: a color keyword, hexadecimal, rgb(), rgba(), hsl(), hsla()*/
+
+/* Section 32.1: bottom-only drop shadow using a pseudo-element */
+
+.box-shadow {
+  background-color: #1c90f3;
+  width: 200px;
+  height: 100px;
+  margin: 50px;
+}
+.box-shadow::after {
+  content: "";
+  width: 190px;
+  height: 1px;
+  margin-top: 98px;
+  margin-left: 5px;
+  display: block;
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0px 0px 8px 2px #444444;
+}
+
+/* Section 32.2: drop shadow */
+
+.box-shadow1 {
+  height: 200px;
+  width: 100px;
+  background-color: red;
+  box-shadow: 0px 0px 10px -1px #575555;
+}
+
+/* Section 32.3: inner drop shadow */
+.box-shadow2 {
+  height: 200px;
+  width: 100px;
+  background-color: red;
+  box-shadow: inset 0px 0px 10px -1px #444444;
+}
+
+/* Section 32.4: multiple shadows */
+
+.box-shadow3 {
+  width: 100px;
+  height: 100px;
+  margin: 100px;
+  box-shadow: -52px -52px 0px 0px #f65314, 52px -52px 0px 0px #7cbb00,
+    -52px 52px 0px 0px #00a1f1, 52px 52px 0px 0px #ffbb00;
+}
+
+/* Chapter 33: Shapes for Floats */
+
+/* Section 33.1: Shape Outside with Basic Shape – circle() */
+
+.circle-outside {
+  width: 100px;
+  height: 100px;
+  background-color: #575555;
+  shape-outside: circle(80px at 50% 50%);
+}
+
+/* Section 33.2: Shape margin */
+
+/* Chapter 34: List Styles */
+
+/* Section 34.1: Bullet Position */
+
+/* list-style-position: outside */
+/* list-style-position: inside */
+
+/* Section 34.2: Removing Bullets / Numbers */
+
+ul {
+  list-style-type: none;
+}
+
+/* Section 34.3: Type of Bullet or Numbering */
+
+/* 
+Specific for <li> tags within an unordered list (<ul>):
+GoalKicker */
+
+ul {
+  list-style-type: decimal-leading-zero;
+}

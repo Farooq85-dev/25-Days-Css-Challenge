@@ -37,3 +37,5 @@
 ## Day-16:- ANIMATIONS & Transforms
 
 ## Day-17:- FILTER & CURSOR STYLING
+
+## Day-18:- BOX SHADOW, LIST & SHAPE FOR FLOATS
