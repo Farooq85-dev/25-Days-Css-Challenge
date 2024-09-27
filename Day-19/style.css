@@ -1,0 +1,83 @@
+/* Chapter 35: Counters */
+
+/* Section 35.1: Applying roman numerals styling to the counteroutput */
+
+.item {
+  counter-increment: item-counter;
+}
+
+.item:before {
+  content: counter(item-counter, decimal-leading-zero) ". ";
+}
+
+/* List Counter */
+/* ul {
+  list-style: none;
+  counter-reset: list-item-number; /* self nesting counter as name is same for all levels */
+*/ li {
+  counter-increment: parent-counter;
+}
+
+li::before {
+  content: counters(list-item-number, ".") " ";
+}
+
+/* Chapter 36: Functions */
+
+/* Section 36.1: calc() function */
+
+/* Accepts a mathematical expression and returns a numerical value. */
+
+/* It is especially useful when working with different types of units (e.g. subtracting a px value from a percentage) to
+calculate the value of an attribute.
++, -, /, and * operators can all be used, and parentheses can be added to specify the order of operations if
+necessary.
+Use calc() to calculate the width of a div element: */
+
+#div1 {
+  position: absolute;
+  left: 50px;
+  width: calc(100% - 100px);
+  border: 1px solid black;
+  background-color: yellow;
+  padding: 5px;
+  text-align: center;
+}
+
+/* Use calc() to determine the height of an element: */
+
+/* height: calc(100% - 20px); */
+
+/* Section 36.2: attr() function */
+
+/* Returns the value of an attribute of the selected element. */
+
+/* Below is a blockquote element which contains a character inside a data-* attribute which CSS can use (e.g. inside
+the ::before and ::after pseudo-element) using this function */
+
+a[data-mark]::before {
+  content: attr(data-mark);
+}
+
+/* Section 36.3: var() function */
+:root {
+  --text-color: red;
+}
+
+/* The var() function allows CSS variables to be accessed. */
+#div1 {
+  color: var(--text-color);
+}
+
+/* Section 36.4: radial-gradient() function */
+
+/* Creates an image representing a gradient of colors radiating from the center of the gradient */
+#div1 {
+  background: radial-gradient(red, green, yellow);
+}
+
+/* Section 36.5: linear-gradient() function */
+
+#div {
+  background: linear-gradient(yellow, purple, blue);
+}
