@@ -1,0 +1,88 @@
+/* Chapter 37: Custom Properties (Variables) */
+
+/* CSS Variables allow authors to create reusable values which can be used throughout a CSS document. */
+
+/* For example, it's common in CSS to reuse a single color throughout a document. Prior to CSS Variables this would
+mean reusing the same color value many times throughout a document. With CSS Variables the color value can be
+assigned to a variable and referenced in multiple places. This makes changing values easier and is more semantic
+than using traditional CSS values. */
+
+/* Section 37.1: Variable Color */
+
+:root {
+  --red: #b00;
+  --blue: #4679bd;
+  --grey: #ddd;
+}
+.Bx1 {
+  color: var(--red);
+  background: var(--grey);
+  border: 1px solid var(--red);
+}
+
+/* Section 37.2: Variable Dimensions */
+:root {
+  --W200: 200px;
+  --W10: 10px;
+}
+.Bx2 {
+  width: var(--W200);
+  height: var(--W200);
+  margin: var(--W10);
+}
+
+/* Section 37.4: Valid/Invalids */
+
+/* //These are Invalids variable names
+--123color: blue;
+--#color: red;
+--bg_color: yellow
+--$width: 100px;
+//Valid variable names
+--color: red;
+--bg-color: yellow
+--width: 100px; */
+
+/* CSS Variables are case sensitive. */
+
+/*  */
+
+/* The variable names below are all different variables */
+/* --pcolor: ; */
+/* --Pcolor: ; */
+/* --pColor: ; */
+
+/* Empty Vs Space */
+
+/* Invalid */
+/* --color:; */
+/* Valid */
+/* --color: ; */
+/* space is assigned */
+
+/* Concatenations */
+
+/* Invalid - CSS doesn't support concatenation*/
+/* .logo{
+    --logo-url: 'logo';
+    background: url('assets/img/' var(--logo-url) '.png');
+} */
+/* Invalid - CSS bug */
+/* .logo{
+    --logo-url: 'assets/img/logo.png';
+    background: url(var(--logo-url));
+} */
+
+/* Careful when using Units */
+
+/* Invalid */
+/* --width: 10;
+width: var(--width) px; */
+/* Valid */
+/* --width: 10px;
+width: var(--width); */
+
+/* Section 37.5: With media queries */
+
+/* You can re-set variables within media queries and have those new values cascade wherever they are used,
+something that isn't possible with pre-processor variables. */
